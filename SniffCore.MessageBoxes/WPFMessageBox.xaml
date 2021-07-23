@@ -1,0 +1,42 @@
+<Window x:Class="SniffCore.MessageBoxes.WPFMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:SniffCore.MessageBoxes">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="UpperArea" />
+            <RowDefinition x:Name="LowerArea" Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ContentControl Content="{Binding Options.BackgroundControl}" Focusable="False" />
+
+        <DockPanel Grid.Row="0">
+            <controls:WPFMessageBoxButtonsPanel Buttons="{Binding Buttons, Mode=TwoWay}"
+                                                DefaultButton="{Binding DefaultButton}"
+                                                Strings="{Binding Options.Strings}"
+                                                ShowHelpButton="{Binding Options.ShowHelpButton}"
+                                                ShowYesToAllButton="{Binding Options.ShowYesToAllButton}"
+                                                ShowNoToAllButton="{Binding Options.ShowNoToAllButton}"
+                                                ShowDoNotShowAgainCheckBox="{Binding Options.ShowDoNotShowAgainCheckBox}"
+                                                IsDoNotShowAgainChecked="{Binding Options.IsDoNotShowAgainChecked, Mode=TwoWay}"
+                                                ShowDetails="{Binding Options.ShowDetails}"
+                                                CustomItem="{Binding Options.CustomItem}"
+                                                DockPanel.Dock="Bottom"
+                                                x:Name="PART_ButtonPanel" />
+
+            <controls:WPFMessageBoxImage Image="{Binding Image}"
+                                                x:Name="PART_ImageControl" />
+
+            <controls:WPFMessageBoxScrollViewer x:Name="PART_ScrollViewerControl">
+                <controls:WPFMessageBoxText Content="{Binding Message}" x:Name="PART_TextControl" />
+            </controls:WPFMessageBoxScrollViewer>
+        </DockPanel>
+
+        <controls:WPFMessageBoxDetailsPresenter Grid.Row="1"
+                                                x:Name="PART_DetailsPresenter"
+                                                IsDetailsExpanded="{Binding IsDetailsExpanded}"
+                                                Content="{Binding Options.DetailsContent}" />
+    </Grid>
+
+</Window>
