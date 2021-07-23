@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 namespace SniffCore.MessageBoxes
 {
     /// <summary>
-    ///     Represents the icon shown in the <see cref="WPFMessageBox" />.
+    ///     Represents the icon shown in the WPFMessageBox.
     /// </summary>
     public class WPFMessageBoxImage : Control
     {

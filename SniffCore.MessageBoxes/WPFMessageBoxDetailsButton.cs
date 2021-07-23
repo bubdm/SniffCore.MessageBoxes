@@ -10,7 +10,7 @@ using System.Windows.Controls;
 namespace SniffCore.MessageBoxes
 {
     /// <summary>
-    ///     Represents the details button shown in the <see cref="WPFMessageBox" />.
+    ///     Represents the details button shown in the WPFMessageBox.
     /// </summary>
     public class WPFMessageBoxDetailsButton : Expander
     {

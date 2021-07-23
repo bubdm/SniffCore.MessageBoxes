@@ -9,7 +9,7 @@ using System.Windows.Controls;
 namespace SniffCore.MessageBoxes
 {
     /// <summary>
-    ///     Represents the ScrollViewer used in the <see cref="WPFMessageBox" />.
+    ///     Represents the ScrollViewer used in the WPFMessageBox.
     /// </summary>
     public class WPFMessageBoxScrollViewer : ScrollViewer
     {

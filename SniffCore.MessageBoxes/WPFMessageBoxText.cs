@@ -9,7 +9,7 @@ using System.Windows.Controls;
 namespace SniffCore.MessageBoxes
 {
     /// <summary>
-    ///     Represents the text block used in the <see cref="WPFMessageBox" />.
+    ///     Represents the text block used in the WPFMessageBox.
     /// </summary>
     public class WPFMessageBoxText : ContentControl
     {

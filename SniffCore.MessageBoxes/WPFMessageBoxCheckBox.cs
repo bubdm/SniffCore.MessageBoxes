@@ -9,7 +9,7 @@ using System.Windows.Controls;
 namespace SniffCore.MessageBoxes
 {
     /// <summary>
-    ///     Represents the CheckBox used in the <see cref="WPFMessageBox" />.
+    ///     Represents the CheckBox used in the WPFMessageBox.
     /// </summary>
     public class WPFMessageBoxCheckBox : CheckBox
     {

@@ -1,4 +1,4 @@
-<Window x:Class="SniffCore.MessageBoxes.WPFMessageBox"
+<Window x:Class="SniffCore.MessageBoxes.WPFMessageBoxWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:controls="clr-namespace:SniffCore.MessageBoxes">
@@ -26,7 +26,7 @@
                                                 x:Name="PART_ButtonPanel" />
 
             <controls:WPFMessageBoxImage Image="{Binding Image}"
-                                                x:Name="PART_ImageControl" />
+                                         x:Name="PART_ImageControl" />
 
             <controls:WPFMessageBoxScrollViewer x:Name="PART_ScrollViewerControl">
                 <controls:WPFMessageBoxText Content="{Binding Message}" x:Name="PART_TextControl" />
