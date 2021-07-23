@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using System.Windows.Controls;
 using SniffCore.MessageBoxes;
 
 namespace Tryout
@@ -18,7 +17,9 @@ namespace Tryout
             {
                 ShowDoNotShowAgainCheckBox = true
             };
-            WPFMessageBox.Show(this, "text", "caption", WPFMessageBoxButtons.OKCancel, WPFMessageBoxImages.Question, WPFMessageBoxResult.Cancel, options);
+            var result = WPFMessageBox.Show(this, "text", "caption", WPFMessageBoxButtons.OKCancel, WPFMessageBoxImages.Question, WPFMessageBoxResult.Cancel, options);
+
+            WPFMessageBox.Show(result.ToString());
         }
     }
 }

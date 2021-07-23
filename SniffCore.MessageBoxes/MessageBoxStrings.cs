@@ -181,21 +181,15 @@ namespace SniffCore.MessageBoxes
             if (!string.IsNullOrWhiteSpace(alternate))
                 return alternate;
 
-            switch (id)
+            return id switch
             {
-                case YesToAllId:
-                    return "Y_es to All";
-                case NoToAllId:
-                    return "N_o to All";
-                case DoNotShowAgainId:
-                    return "_Don't show this message again";
-                case OpenDetailsId:
-                    return "_Show Details";
-                case CloseDetailsId:
-                    return "_Hide Details";
-            }
-
-            return string.Empty;
+                YesToAllId => "Y_es to All",
+                NoToAllId => "N_o to All",
+                DoNotShowAgainId => "_Don't show this message again",
+                OpenDetailsId => "_Show Details",
+                CloseDetailsId => "_Hide Details",
+                _ => string.Empty
+            };
         }
     }
 }

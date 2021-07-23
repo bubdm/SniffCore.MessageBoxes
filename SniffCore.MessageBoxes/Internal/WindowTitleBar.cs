@@ -59,8 +59,7 @@ namespace SniffCore.MessageBoxes.Internal
 
         internal static void DisableCloseButton(Window window)
         {
-            var hwndSource = PresentationSource.FromVisual(window) as HwndSource;
-            if (hwndSource != null)
+            if (PresentationSource.FromVisual(window) is HwndSource hwndSource)
                 hwndSource.AddHook(DisableCloseButtonHook);
         }
 
