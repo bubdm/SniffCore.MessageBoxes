@@ -9,8 +9,6 @@ using System.Windows;
 using System.Windows.Input;
 using SniffCore.MessageBoxes.Internal;
 
-// ReSharper disable UnusedAutoPropertyAccessor.Global
-
 namespace SniffCore.MessageBoxes
 {
     /// <summary>
